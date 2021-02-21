@@ -19,7 +19,7 @@ class SHOOTTHEM_API ASTBaseCharacter : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	ASTBaseCharacter();
+	ASTBaseCharacter(const FObjectInitializer& ObjInit);
 
 protected:
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Components")
@@ -29,6 +29,9 @@ protected:
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	public:
+	UFUNCTION(BlueprintCallable,Category="Movement")
+	bool IsRunning() const;
 
 public:	
 	// Called every frame
@@ -37,9 +40,13 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	private:
+	bool WantsToRun=false;
+	bool IsMoveForward=false;
+	
 	void MoveForward(float Amount);
 	void MoveRight(float Amount);
-	void Run();
-	void Walk();
+	
+	void OnStartRun();
+	void OnStopRun();
 
 };

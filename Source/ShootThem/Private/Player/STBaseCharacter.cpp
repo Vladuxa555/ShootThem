@@ -6,9 +6,10 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Components/STCharacterMovementComponent.h"
 
 // Sets default values
-ASTBaseCharacter::ASTBaseCharacter()
+ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjInit.SetDefaultSubobjectClass<USTCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -27,6 +28,11 @@ void ASTBaseCharacter::BeginPlay()
 	
 }
 
+bool ASTBaseCharacter::IsRunning() const
+{
+	return WantsToRun && IsMoveForward && !GetVelocity().IsZero();
+}
+
 // Called every frame
 void ASTBaseCharacter::Tick(float DeltaTime)
 {
@@ -43,13 +49,14 @@ void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("LookUp",this,&ASTBaseCharacter::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("TurnAround",this,&ASTBaseCharacter::AddControllerYawInput);
 	PlayerInputComponent->BindAction("Jump",IE_Pressed,this,&ASTBaseCharacter::Jump);
-	PlayerInputComponent->BindAction("Run",IE_Pressed,this,&ASTBaseCharacter::Run);
-	PlayerInputComponent->BindAction("Run",IE_Released,this,&ASTBaseCharacter::Walk);
+	PlayerInputComponent->BindAction("Run",IE_Pressed,this,&ASTBaseCharacter::OnStartRun);
+	PlayerInputComponent->BindAction("Run",IE_Released,this,&ASTBaseCharacter::OnStopRun);
  
 }
 
 void ASTBaseCharacter::MoveForward(float Amount)
 {
+	IsMoveForward = Amount > 0.0f;
 	AddMovementInput(GetActorForwardVector(), Amount);
 }
 
@@ -58,13 +65,11 @@ void ASTBaseCharacter::MoveRight(float Amount)
 	AddMovementInput(GetActorRightVector(),Amount);
 }
 
-void ASTBaseCharacter::Run()
+void ASTBaseCharacter::OnStartRun()
 {
-	UCharacterMovementComponent CharacterMovementComponent;
-	CharacterMovementComponent.GetMaxSpeed();
+	WantsToRun=true;
 }
-void ASTBaseCharacter::Walk()
+void ASTBaseCharacter::OnStopRun()
 {
-	UCharacterMovementComponent CharacterMovementComponent;
-	CharacterMovementComponent.MaxWalkSpeed=500;
+	WantsToRun=false;
 }

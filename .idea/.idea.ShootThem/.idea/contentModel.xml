@@ -49331,11 +49331,13 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="D:\Games\UE_4.26\Projects\ShootThem" t="IncludeFlat">
+      <e p=".gitattributes" t="Include" />
       <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
         <e p="DefaultGame.ini" t="Include" />
+        <e p="DefaultInput.ini" t="Include" />
       </e>
       <e p="Engine" t="Include" />
       <e p="Games" t="Include" />
@@ -49350,6 +49352,9 @@
       <e p="Source" t="Include">
         <e p="ShootThem" t="Include">
           <e p="Private" t="Include">
+            <e p="Components" t="Include">
+              <e p="STCharacterMovementComponent.cpp" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.cpp" t="Include" />
               <e p="STPlayerController.cpp" t="Include" />
@@ -49357,6 +49362,9 @@
             <e p="STGameModeBase.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
+            <e p="Components" t="Include">
+              <e p="STCharacterMovementComponent.h" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.h" t="Include" />
               <e p="STPlayerController.h" t="Include" />
