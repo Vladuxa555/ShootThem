@@ -9,10 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93807440-f546-46f5-9181-e17109e7a432" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Player/Animations/BS_Locomption.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/Animations/BS_LocomptionWalk.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" afterDir="false" />
@@ -55,10 +57,10 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBASECharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/STGameModeBase.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/STGameModeBase.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STCharacterMovementComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STCharacterMovementComponent.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
     </changedPaths>
   </component>
@@ -299,7 +301,8 @@
       <updated>1613826165378</updated>
       <workItem from="1613826174412" duration="2720000" />
       <workItem from="1613829825686" duration="14706000" />
-      <workItem from="1613902923678" duration="4513000" />
+      <workItem from="1613902923678" duration="5717000" />
+      <workItem from="1613935318710" duration="4803000" />
     </task>
     <servers />
   </component>
@@ -318,6 +321,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
