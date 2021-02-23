@@ -7,6 +7,10 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Components/STCharacterMovementComponent.h"
+#include "Components/STHealthComponent.h"
+#include "Components/TextRenderComponent.h"
+
+DEFINE_LOG_CATEGORY_STATIC(BaseCharacterLog,All,All);
 
 // Sets default values
 ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjInit.SetDefaultSubobjectClass<USTCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
@@ -19,13 +23,19 @@ ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjI
 	
 	CameraComponent=CreateDefaultSubobject<UCameraComponent>("CameraComponent");
 	CameraComponent->SetupAttachment(SpringArmComponent);
+
+	HealthComponent = CreateDefaultSubobject<USTHealthComponent>("HealthComponent");
+	
+	HealthTextComponent = CreateDefaultSubobject<UTextRenderComponent>("HealthTextComponent");
+	HealthTextComponent->SetupAttachment(GetRootComponent());
 }
 
 // Called when the game starts or when spawned
 void ASTBaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	check(HealthComponent);
+	check(HealthTextComponent);
 }
 
 bool ASTBaseCharacter::IsRunning() const
@@ -47,6 +57,11 @@ float ASTBaseCharacter::GetMovementDirection() const
 void ASTBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	const auto Health = HealthComponent->GetHealth();
+	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"),Health)));
+
+	TakeDamage(0.1f,FDamageEvent{}, Controller, this);
 
 }
 
@@ -85,3 +100,5 @@ void ASTBaseCharacter::OnStopRun()
 {
 	WantsToRun=false;
 }
+
+

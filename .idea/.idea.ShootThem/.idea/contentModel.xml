@@ -49354,6 +49354,7 @@
           <e p="Private" t="Include">
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.cpp" t="Include" />
+              <e p="STHealthComponent.cpp" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.cpp" t="Include" />
@@ -49364,6 +49365,7 @@
           <e p="Public" t="Include">
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.h" t="Include" />
+              <e p="STHealthComponent.h" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.h" t="Include" />

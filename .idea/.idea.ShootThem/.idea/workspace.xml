@@ -9,15 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93807440-f546-46f5-9181-e17109e7a432" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Player/Animations/BS_LocomptionWalk.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +41,14 @@
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/Quat.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -59,8 +58,12 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/STGameModeBase.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STCharacterMovementComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STCharacterMovementComponent.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponentComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponentComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
     </changedPaths>
   </component>
@@ -303,6 +306,9 @@
       <workItem from="1613829825686" duration="14706000" />
       <workItem from="1613902923678" duration="5717000" />
       <workItem from="1613935318710" duration="4803000" />
+      <workItem from="1614015728667" duration="2263000" />
+      <workItem from="1614018451819" duration="694000" />
+      <workItem from="1614022595442" duration="3543000" />
     </task>
     <servers />
   </component>

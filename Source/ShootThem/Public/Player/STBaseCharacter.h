@@ -4,14 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "Camera/CameraComponent.h"
+#include "Components/TextRenderComponent.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
-
 #include "STBaseCharacter.generated.h"
 
 class UCameraComponent;
 class USpringArmComponent; 
-
+class USTHealthComponent;
+class UTextRenderComponent;
 UCLASS()
 class SHOOTTHEM_API ASTBaseCharacter : public ACharacter
 {
@@ -24,8 +25,15 @@ public:
 protected:
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Components")
 	USpringArmComponent *SpringArmComponent;
+	
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Components")
 	UCameraComponent *CameraComponent;
+	
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
+	USTHealthComponent *HealthComponent;
+
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
+	UTextRenderComponent *HealthTextComponent;
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -50,5 +58,5 @@ public:
 	
 	void OnStartRun();
 	void OnStopRun();
-
+	
 };
