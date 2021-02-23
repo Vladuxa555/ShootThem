@@ -49356,6 +49356,11 @@
               <e p="STCharacterMovementComponent.cpp" t="Include" />
               <e p="STHealthComponent.cpp" t="Include" />
             </e>
+            <e p="Dev" t="Include">
+              <e p="STDevDamageActor.cpp" t="Include" />
+              <e p="STFireDamageType.cpp" t="Include" />
+              <e p="STIceDamageType.cpp" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.cpp" t="Include" />
               <e p="STPlayerController.cpp" t="Include" />
@@ -49366,6 +49371,11 @@
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.h" t="Include" />
               <e p="STHealthComponent.h" t="Include" />
+            </e>
+            <e p="Dev" t="Include">
+              <e p="STDevDamageActor.h" t="Include" />
+              <e p="STFireDamageType.h" t="Include" />
+              <e p="STIceDamageType.h" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.h" t="Include" />

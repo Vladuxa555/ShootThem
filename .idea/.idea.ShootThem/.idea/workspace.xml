@@ -12,9 +12,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/Animations/ABP_BaseCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_3rdSTBaseCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShootThem.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ShootThem.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,30 +30,32 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/CrowdFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/PathFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/MovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Controller.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/PawnMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Controller.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/EngineBaseTypes.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Editor/Cascade/Private/CascadeEmitterCanvasClient.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/Quat.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/MovementComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PawnMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Controller.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Editor/Cascade/Private/CascadeEmitterCanvasClient.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/Quat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/PawnMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/CrowdFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectBaseUtility.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/PathFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -58,12 +65,14 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/STGameModeBase.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STCharacterMovementComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STCharacterMovementComponent.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponentComponent.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponentComponent.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Dev/STDevDamageActor.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Dev/STDevDamageActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
     </changedPaths>
   </component>
@@ -309,6 +318,8 @@
       <workItem from="1614015728667" duration="2263000" />
       <workItem from="1614018451819" duration="694000" />
       <workItem from="1614022595442" duration="3543000" />
+      <workItem from="1614083691994" duration="6079000" />
+      <workItem from="1614095837044" duration="48000" />
     </task>
     <servers />
   </component>

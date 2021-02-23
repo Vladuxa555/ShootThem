@@ -7,7 +7,9 @@
 #include "Components/TextRenderComponent.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/Controller.h"
 #include "STBaseCharacter.generated.h"
+
 
 class UCameraComponent;
 class USpringArmComponent; 
@@ -34,10 +36,13 @@ protected:
 
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
 	UTextRenderComponent *HealthTextComponent;
+
+	UPROPERTY(EditDefaultsOnly,Category="Animation")
+	UAnimMontage *DeathAnimMontage;
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	public:
+public:
 	UFUNCTION(BlueprintCallable,Category="Movement")
 	bool IsRunning() const;
 	UFUNCTION(BlueprintCallable,Category="Movement")
@@ -49,7 +54,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-	private:
+private:
 	bool WantsToRun=false;
 	bool IsMoveForward=false;
 	
@@ -58,5 +63,8 @@ public:
 	
 	void OnStartRun();
 	void OnStopRun();
+
+	void OnDeath();
+	void OnHealthChanged(float Health);
 	
 };

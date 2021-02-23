@@ -36,6 +36,11 @@ void ASTBaseCharacter::BeginPlay()
 	Super::BeginPlay();
 	check(HealthComponent);
 	check(HealthTextComponent);
+	check(GetCharacterMovement());
+
+	OnHealthChanged(HealthComponent->GetHealth());
+	HealthComponent->OnDeath.AddUObject(this, &ASTBaseCharacter::OnDeath);
+	HealthComponent->OnHealthChanged.AddUObject(this, &ASTBaseCharacter::OnHealthChanged);
 }
 
 bool ASTBaseCharacter::IsRunning() const
@@ -58,11 +63,7 @@ void ASTBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	const auto Health = HealthComponent->GetHealth();
-	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"),Health)));
-
-	TakeDamage(0.1f,FDamageEvent{}, Controller, this);
-
+	
 }
 
 // Called to bind functionality to input
@@ -99,6 +100,24 @@ void ASTBaseCharacter::OnStartRun()
 void ASTBaseCharacter::OnStopRun()
 {
 	WantsToRun=false;
+}
+
+void ASTBaseCharacter::OnDeath()
+{
+	UE_LOG(BaseCharacterLog,Display,TEXT("Player %s is dead"), *GetName());
+
+	PlayAnimMontage(DeathAnimMontage);
+	GetCharacterMovement()->DisableMovement();
+	SetLifeSpan(5.0f);
+	if(Controller)
+	{
+		Controller->ChangeState(NAME_Spectating);
+	}
+}
+
+void ASTBaseCharacter::OnHealthChanged(float Health)
+{
+	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"),Health)));
 }
 
 
