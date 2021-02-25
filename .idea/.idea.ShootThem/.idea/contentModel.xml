@@ -49350,6 +49350,11 @@
       <e p="Source" t="Include">
         <e p="ShootThem" t="Include">
           <e p="Private" t="Include">
+            <e p="Animations" t="Include">
+              <e p="STAnimNotify.cpp" t="Include" />
+              <e p="STEquipFinishedAnimNotify.cpp" t="Include" />
+              <e p="STReloadFinishedAnimNotify.cpp" t="Include" />
+            </e>
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.cpp" t="Include" />
               <e p="STHealthComponent.cpp" t="Include" />
@@ -49376,6 +49381,12 @@
             </e>
           </e>
           <e p="Public" t="Include">
+            <e p="Animations" t="Include">
+              <e p="AnimUtils.h" t="Include" />
+              <e p="STAnimNotify.h" t="Include" />
+              <e p="STEquipFinishedAnimNotify.h" t="Include" />
+              <e p="STReloadFinishedAnimNotify.h" t="Include" />
+            </e>
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.h" t="Include" />
               <e p="STHealthComponent.h" t="Include" />
@@ -49390,6 +49401,7 @@
               <e p="STBASECharacter.h" t="Include" />
               <e p="STPlayerController.h" t="Include" />
             </e>
+            <e p="STCoreTypes.h" t="Include" />
             <e p="STGameModeBase.h" t="Include" />
             <e p="UI" t="Include">
               <e p="STGameHUD.h" t="Include" />

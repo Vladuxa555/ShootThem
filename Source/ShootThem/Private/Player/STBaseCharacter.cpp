@@ -91,7 +91,8 @@ void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Run",IE_Released,this,&ASTBaseCharacter::OnStopRun);
 	PlayerInputComponent->BindAction("Fire",IE_Pressed,WeaponComponent,&USTWeaponComponent::StartFire);
 	PlayerInputComponent->BindAction("Fire",IE_Released,WeaponComponent,&USTWeaponComponent::StopFire);
-	//PlayerInputComponent->BindAction("NextWeapon",IE_Pressed,WeaponComponent,&USTWeaponComponent::NextWeapon);
+	PlayerInputComponent->BindAction("NextWeapon",IE_Pressed,WeaponComponent,&USTWeaponComponent::NextWeapon);
+	PlayerInputComponent->BindAction("Reload",IE_Pressed,WeaponComponent,&USTWeaponComponent::Reload);
  
 }
 
@@ -129,6 +130,7 @@ void ASTBaseCharacter::OnDeath()
 		Controller->ChangeState(NAME_Spectating);
 	}
 	GetCapsuleComponent()->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+	WeaponComponent->StopFire();
 }
 
 void ASTBaseCharacter::OnHealthChanged(float Health)

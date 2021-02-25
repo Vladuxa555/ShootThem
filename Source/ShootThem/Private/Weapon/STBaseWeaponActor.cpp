@@ -25,7 +25,10 @@ ASTBaseWeaponActor::ASTBaseWeaponActor()
 void ASTBaseWeaponActor::BeginPlay()
 {
 	Super::BeginPlay();
-	check(WeaponMesh)
+	check(WeaponMesh);
+	checkf(DefaultAmmo.Bullets>0 ,TEXT("Bullets count couldn't be less or equal zero"));
+	checkf(DefaultAmmo.Clips>0,TEXT("Clips count couldn't be less or equal zero"));
+	CurrentAmmo = DefaultAmmo;
 }
 
 void ASTBaseWeaponActor::MakeShot()
@@ -77,14 +80,67 @@ void ASTBaseWeaponActor::MakeHit(FHitResult& HitResult, const FVector& TraceStar
 
 }
 
-void ASTBaseWeaponActor::StartFire()
+void ASTBaseWeaponActor::DecreaseAmmo()
+{
+	if(CurrentAmmo.Bullets==0)
+	{
+		UE_LOG(LogBaseWeapon,Warning,TEXT("Climp Is Empty"));
+		return;
+	}
+	CurrentAmmo.Bullets--;
+	LogAmmo();
+
+	if(IsClipEmpty() && !IsAmmoEmpty())
+	{
+		StopFire();
+		OnClipEmpty.Broadcast();
+	}
+}
+
+bool ASTBaseWeaponActor::IsAmmoEmpty() const
+{
+	return !CurrentAmmo.Infinite && CurrentAmmo.Clips == 0 && IsClipEmpty();
+}
+
+bool ASTBaseWeaponActor::IsClipEmpty() const
+{
+	return CurrentAmmo.Bullets == 0;
+}
+
+void ASTBaseWeaponActor::ChangeClip() 
 {
 	
+	if(!CurrentAmmo.Infinite)
+	{
+		if(CurrentAmmo.Clips==0)
+		{
+			UE_LOG(LogBaseWeapon,Warning,TEXT("No More Clips"));
+			return;
+		}
+		CurrentAmmo.Clips--;
+	}
+	CurrentAmmo.Bullets = DefaultAmmo.Bullets;
+	UE_LOG(LogBaseWeapon,Display,TEXT("--------------Change Clip---------------"));
+}
+
+bool ASTBaseWeaponActor::CanReload()
+{
+	return CurrentAmmo.Bullets <DefaultAmmo.Bullets && CurrentAmmo.Clips>0;
+}
+
+void ASTBaseWeaponActor::LogAmmo() 
+{
+	FString AmmoInfo = "Ammo" + FString::FromInt(CurrentAmmo.Bullets)+"/";
+	AmmoInfo +=CurrentAmmo.Infinite? "Infinite":FString::FromInt(CurrentAmmo.Clips);
+	UE_LOG(LogBaseWeapon,Display,TEXT("%s"),*AmmoInfo);
+}
+
+void ASTBaseWeaponActor::StartFire()
+{
 }
 
 void ASTBaseWeaponActor::StopFire()
 {
-	
 }
 
 

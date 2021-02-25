@@ -10,7 +10,7 @@ void ASTLauncherWeaponActor::StartFire()
 
 void ASTLauncherWeaponActor::MakeShot()
 {
-	if(!GetWorld())return;
+	if(!GetWorld() ||IsAmmoEmpty())return;
 
 	FVector TraceStart,TraceEnd;
 	if(!GetTraceData(TraceStart,TraceEnd))return;
@@ -29,5 +29,5 @@ void ASTLauncherWeaponActor::MakeShot()
 		Projectile->SetOwner(GetOwner());
 		Projectile->FinishSpawning(SpawnTransform);
 	}
-	
+	DecreaseAmmo();
 }
