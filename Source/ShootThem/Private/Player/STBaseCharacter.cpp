@@ -9,7 +9,8 @@
 #include "Components/STCharacterMovementComponent.h"
 #include "Components/STHealthComponent.h"
 #include "Components/TextRenderComponent.h"
-
+#include "Components/CapsuleComponent.h"
+#include "Components/STWeaponComponent.h"
 DEFINE_LOG_CATEGORY_STATIC(BaseCharacterLog,All,All);
 
 // Sets default values
@@ -20,6 +21,7 @@ ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjI
 	SpringArmComponent=CreateDefaultSubobject<USpringArmComponent>("SpringArmComponent");
 	SpringArmComponent->SetupAttachment(GetRootComponent());
 	SpringArmComponent->bUsePawnControlRotation=true;
+	SpringArmComponent->SocketOffset = FVector(0.f,100.0f,80.0f);
 	
 	CameraComponent=CreateDefaultSubobject<UCameraComponent>("CameraComponent");
 	CameraComponent->SetupAttachment(SpringArmComponent);
@@ -28,6 +30,9 @@ ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjI
 	
 	HealthTextComponent = CreateDefaultSubobject<UTextRenderComponent>("HealthTextComponent");
 	HealthTextComponent->SetupAttachment(GetRootComponent());
+	HealthTextComponent->SetOwnerNoSee(true);
+
+	WeaponComponent = CreateDefaultSubobject<USTWeaponComponent>("WeaponComponent");
 }
 
 // Called when the game starts or when spawned
@@ -43,6 +48,7 @@ void ASTBaseCharacter::BeginPlay()
 	HealthComponent->OnHealthChanged.AddUObject(this, &ASTBaseCharacter::OnHealthChanged);
 
 	LandedDelegate.AddDynamic(this, &ASTBaseCharacter::OnGroundLanded);
+
 }
 
 bool ASTBaseCharacter::IsRunning() const
@@ -73,6 +79,8 @@ void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	check(PlayerInputComponent);
+	check(WeaponComponent);
+	check(GetCapsuleComponent());
 	
 	PlayerInputComponent->BindAxis("MoveForward",this,&ASTBaseCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight",this,&ASTBaseCharacter::MoveRight);
@@ -81,6 +89,9 @@ void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Jump",IE_Pressed,this,&ASTBaseCharacter::Jump);
 	PlayerInputComponent->BindAction("Run",IE_Pressed,this,&ASTBaseCharacter::OnStartRun);
 	PlayerInputComponent->BindAction("Run",IE_Released,this,&ASTBaseCharacter::OnStopRun);
+	PlayerInputComponent->BindAction("Fire",IE_Pressed,WeaponComponent,&USTWeaponComponent::StartFire);
+	PlayerInputComponent->BindAction("Fire",IE_Released,WeaponComponent,&USTWeaponComponent::StopFire);
+	//PlayerInputComponent->BindAction("NextWeapon",IE_Pressed,WeaponComponent,&USTWeaponComponent::NextWeapon);
  
 }
 
@@ -117,6 +128,7 @@ void ASTBaseCharacter::OnDeath()
 	{
 		Controller->ChangeState(NAME_Spectating);
 	}
+	GetCapsuleComponent()->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 }
 
 void ASTBaseCharacter::OnHealthChanged(float Health)
@@ -135,5 +147,16 @@ void ASTBaseCharacter::OnGroundLanded(const FHitResult& Hit)
 	UE_LOG(BaseCharacterLog,Display,TEXT("FinalDamage: %f"), FinalDamage);
 	TakeDamage(FinalDamage,FDamageEvent{},nullptr,nullptr);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 

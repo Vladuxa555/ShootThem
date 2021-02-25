@@ -49353,6 +49353,7 @@
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.cpp" t="Include" />
               <e p="STHealthComponent.cpp" t="Include" />
+              <e p="STWeaponComponent.cpp" t="Include" />
             </e>
             <e p="Dev" t="Include">
               <e p="STDevDamageActor.cpp" t="Include" />
@@ -49364,11 +49365,21 @@
               <e p="STPlayerController.cpp" t="Include" />
             </e>
             <e p="STGameModeBase.cpp" t="Include" />
+            <e p="UI" t="Include">
+              <e p="STGameHUD.cpp" t="Include" />
+            </e>
+            <e p="Weapon" t="Include">
+              <e p="STBaseWeaponActor.cpp" t="Include" />
+              <e p="STLauncherWeaponActor.cpp" t="Include" />
+              <e p="STProjectile.cpp" t="Include" />
+              <e p="STRifleWeaponActor.cpp" t="Include" />
+            </e>
           </e>
           <e p="Public" t="Include">
             <e p="Components" t="Include">
               <e p="STCharacterMovementComponent.h" t="Include" />
               <e p="STHealthComponent.h" t="Include" />
+              <e p="STWeaponComponent.h" t="Include" />
             </e>
             <e p="Dev" t="Include">
               <e p="STDevDamageActor.h" t="Include" />
@@ -49380,6 +49391,15 @@
               <e p="STPlayerController.h" t="Include" />
             </e>
             <e p="STGameModeBase.h" t="Include" />
+            <e p="UI" t="Include">
+              <e p="STGameHUD.h" t="Include" />
+            </e>
+            <e p="Weapon" t="Include">
+              <e p="STBaseWeaponActor.h" t="Include" />
+              <e p="STLauncherWeaponActor.h" t="Include" />
+              <e p="STProjectile.h" t="Include" />
+              <e p="STRifleWeaponActor.h" t="Include" />
+            </e>
           </e>
           <e p="ShootThem.Build.cs" t="Include" />
           <e p="ShootThem.cpp" t="Include" />

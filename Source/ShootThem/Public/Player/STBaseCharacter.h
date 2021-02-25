@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "STBaseWeaponActor.h"
 #include "Camera/CameraComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "GameFramework/Character.h"
@@ -15,6 +17,7 @@ class UCameraComponent;
 class USpringArmComponent; 
 class USTHealthComponent;
 class UTextRenderComponent;
+class USTWeaponComponent;
 UCLASS()
 class SHOOTTHEM_API ASTBaseCharacter : public ACharacter
 {
@@ -37,6 +40,9 @@ protected:
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
 	UTextRenderComponent *HealthTextComponent;
 
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
+	USTWeaponComponent *WeaponComponent;
+
 	UPROPERTY(EditDefaultsOnly,Category="Animation")
 	UAnimMontage *DeathAnimMontage;
 
@@ -48,7 +54,7 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly,Category="Damage")
 	FVector2D LandedDamage = FVector2D(10.0f, 100.0f);
-	
+
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -71,7 +77,7 @@ private:
 	void MoveForward(float Amount);
 	void MoveRight(float Amount);
 	
-	void OnStartRun();
+	void  OnStartRun();
 	void OnStopRun();
 
 	void OnDeath();
@@ -79,5 +85,6 @@ private:
 
 	UFUNCTION()
 	void OnGroundLanded(const FHitResult &Hit);
+
 	
 };
