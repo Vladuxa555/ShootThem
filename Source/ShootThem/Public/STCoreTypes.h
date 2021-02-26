@@ -2,7 +2,7 @@
 #include"STCoreTypes.generated.h"
 class ASTBaseWeaponActor;
 //Weapon
-DECLARE_MULTICAST_DELEGATE(FOnClipEmptySignature);
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnClipEmptySignature, ASTBaseWeaponActor*);
 
 USTRUCT(BlueprintType)
 struct FAmmoData

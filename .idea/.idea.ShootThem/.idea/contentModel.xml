@@ -49365,6 +49365,11 @@
               <e p="STFireDamageType.cpp" t="Include" />
               <e p="STIceDamageType.cpp" t="Include" />
             </e>
+            <e p="Pickups" t="Include">
+              <e p="STAmmoPickup.cpp" t="Include" />
+              <e p="STBasePickup.cpp" t="Include" />
+              <e p="STHealthPickup.cpp" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.cpp" t="Include" />
               <e p="STPlayerController.cpp" t="Include" />
@@ -49397,6 +49402,11 @@
               <e p="STDevDamageActor.h" t="Include" />
               <e p="STFireDamageType.h" t="Include" />
               <e p="STIceDamageType.h" t="Include" />
+            </e>
+            <e p="Pickups" t="Include">
+              <e p="STAmmoPickup.h" t="Include" />
+              <e p="STBasePickup.h" t="Include" />
+              <e p="STHealthPickup.h" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="STBASECharacter.h" t="Include" />

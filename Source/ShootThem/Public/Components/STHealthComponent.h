@@ -28,6 +28,9 @@ public:
     float GetHealthPercent() const{return Health/MaxHealth;}
 
 	float GetHealth() const {return Health;}
+
+	bool TryToAddHealth(float HealthAmount);
+	bool IsHealthFull() const;
 	
 protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Health",meta = (ClampMin="0.0",ClampMax="1000"))
@@ -56,4 +59,5 @@ private:
 		DamageType, class AController* InstigatedBy, AActor* DamageCauser );
 	void HealUpdate();
 	void SetHealth(float NewHealth);
+
 };

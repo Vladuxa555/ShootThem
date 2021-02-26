@@ -9,24 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93807440-f546-46f5-9181-e17109e7a432" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/ShootThem/Public/STUtils.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Player/BP_STBaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_STBaseCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_STLauncherWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_STLauncherWeapon.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_STRifleWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_STRifleWeapon.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShootThem.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ShootThem.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/UI/STGameHUD.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/UI/STGameHUD.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/UI/STGameHUD.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/UI/STGameHUD.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,6 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STRifleWeaponActor.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STLauncherWeaponActor.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STLauncherWeaponActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/STAnimNotify.h" />
@@ -107,18 +101,25 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/STEquipFinishedAnimNotify.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STRifleWeaponActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/AnimUtils.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/UI/STGameHUD.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/UI/STGameHUD.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/UI/STPlayerHUDWidget.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/UI/STPlayerHUDWidget.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/STUtils.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STAmmoPickup.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STAmmoPickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STHealthPickup.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STHealthPickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STBasePickup.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STBasePickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1okMVf3930Zeis1eaUBQhXjr1pU" />
@@ -377,6 +378,8 @@
       <workItem from="1614259459155" duration="15297000" />
       <workItem from="1614339839941" duration="4299000" />
       <workItem from="1614352572276" duration="5977000" />
+      <workItem from="1614361782928" duration="6652000" />
+      <workItem from="1614370391150" duration="285000" />
     </task>
     <servers />
   </component>

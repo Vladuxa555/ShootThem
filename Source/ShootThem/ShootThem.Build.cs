@@ -18,7 +18,8 @@ public class ShootThem : ModuleRules
 		"ShootThem/Public/Dev",
 		"ShootThem/Public/Weapon",
 		"ShootThem/Public/UI",
-		"ShootThem/Public/Animations"});
+		"ShootThem/Public/Animations",
+		"ShootThem/Public/Pickups"});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
