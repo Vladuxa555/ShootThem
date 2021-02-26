@@ -49372,6 +49372,7 @@
             <e p="STGameModeBase.cpp" t="Include" />
             <e p="UI" t="Include">
               <e p="STGameHUD.cpp" t="Include" />
+              <e p="STPlayerHUDWidget.cpp" t="Include" />
             </e>
             <e p="Weapon" t="Include">
               <e p="STBaseWeaponActor.cpp" t="Include" />
@@ -49403,8 +49404,10 @@
             </e>
             <e p="STCoreTypes.h" t="Include" />
             <e p="STGameModeBase.h" t="Include" />
+            <e p="STUtils.h" t="Include" />
             <e p="UI" t="Include">
               <e p="STGameHUD.h" t="Include" />
+              <e p="STPlayerHUDWidget.h" t="Include" />
             </e>
             <e p="Weapon" t="Include">
               <e p="STBaseWeaponActor.h" t="Include" />
