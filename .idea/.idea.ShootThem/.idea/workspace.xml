@@ -11,16 +11,38 @@
     <list default="true" id="93807440-f546-46f5-9181-e17109e7a432" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShootThem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/BP_STGameModeBase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ExternalContent/Characters/HeroTPP/HeroTPP_Physics.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ExternalContent/Characters/HeroTPP/HeroTPP_Physics.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/TestLevel.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/M_BaseColor.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/M_BaseGlow.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/M_BlueGlow.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/M_GreenGlow.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/M_RedColor.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Pickups/StaticMeshes/SM_Health.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Pickups/StaticMeshes/SM_Health.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Pickups/StaticMeshes/SM_Rockets.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Pickups/StaticMeshes/SM_Rockets.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/BP_STBaseCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_STBaseCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Player/BP_STPlayerController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Player/BP_STPlayerController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WBP_PlayerHUD.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/WBP_PlayerHUD.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_STLauncherWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_STLauncherWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_STProjectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_STProjectile.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Weapon/BP_STRifleWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Weapon/BP_STRifleWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShootThem.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ShootThem.uproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/UI/STPlayerHUDWidget.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/UI/STPlayerHUDWidget.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STLauncherWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STLauncherWeaponActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STRifleWeaponActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STRifleWeaponActor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/UI/STPlayerHUDWidget.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/UI/STPlayerHUDWidget.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STRifleWeaponActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STRifleWeaponActor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,20 +54,34 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/EngineBaseTypes.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/TransformVectorized.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/UMG/Public/Blueprint/UserWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/CoreUObject/Public/UObject/SparseDelegate.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/HAL/Platform.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Public/TimerManager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Editor/Cascade/Private/CascadeEmitterCanvasClient.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/PawnMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/PrimitiveComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Controller.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/HUD.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Animation/AnimNotifies/AnimNotify.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/CharacterMovementComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/EngineBaseTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/SceneComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/TransformVectorized.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Public/Animation/AnimTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Animation/AnimSequenceBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/HUD.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/UMG/Public/Blueprint/UserWidget.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/CoreUObject/Public/UObject/SparseDelegate.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/HAL/Platform.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/AIController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/ThirdParty/PhysX3/APEX_1.4/include/destructible/ModuleDestructible.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/MovementComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Character.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -55,26 +91,18 @@
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/PainCausingVolume.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/Interval.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Public/TimerManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/SceneComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/CharacterMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Actor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/winnt.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Controller.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Editor/Cascade/Private/CascadeEmitterCanvasClient.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Pawn.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BehaviorTreeTypes.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTTaskNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Core/Public/Math/Quat.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Private/Components/PawnMovementComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Classes/BehaviorTree/BTNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/CrowdFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectBaseUtility.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Components/ActorComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/AIModule/Private/Navigation/PathFollowingComponent.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/Engine/World.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -88,38 +116,47 @@
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Dev/STDevDamageActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/STGameModeBase.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/STGameModeBase.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STProjectile.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STProjectile.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STRifleWeaponActor.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STLauncherWeaponActor.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STLauncherWeaponActor.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/STAnimNotify.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Animations/STEquipFinishedAnimNotify.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Animations/STAnimNotify.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/STEquipFinishedAnimNotify.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STRifleWeaponActor.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Animations/AnimUtils.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/UI/STGameHUD.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/UI/STGameHUD.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/UI/STPlayerHUDWidget.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/UI/STPlayerHUDWidget.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/STUtils.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STAmmoPickup.h" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STAmmoPickup.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STWeaponComponent.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STWeaponComponent.cpp" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STHealthPickup.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STHealthPickup.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
-      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Public/Pickups/STBasePickup.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Pickups/STBasePickup.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/Components/STBaseVFXComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STProjectile.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/Components/STWeaponFXComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/Components/STWeaponFXComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Components/STHealthComponent.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/STCoreTypes.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/UI/STPlayerHUDWidget.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/UI/STPlayerHUDWidget.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Player/STBaseCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Components/STHealthComponent.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STBaseWeaponActor.h" />
       <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STBaseWeaponActor.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STLauncherWeaponActor.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/Weapon/STRifleWeaponActor.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STRifleWeaponActor.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Weapon/STProjectile.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/Player/STBaseCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/ShootThem.Build.cs" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/AI/Tasks/STNextLocationTask.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/AI/Tasks/STNextLocationTask.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/AI/STAIController.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/AI/STAIController.cpp" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Public/AI/STAICharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ShootThem/Private/AI/STAICharacter.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1okMVf3930Zeis1eaUBQhXjr1pU" />
@@ -133,7 +170,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.ShootThem">
@@ -380,6 +417,12 @@
       <workItem from="1614352572276" duration="5977000" />
       <workItem from="1614361782928" duration="6652000" />
       <workItem from="1614370391150" duration="285000" />
+      <workItem from="1614428451310" duration="3002000" />
+      <workItem from="1614438072428" duration="340000" />
+      <workItem from="1614438790238" duration="779000" />
+      <workItem from="1614439645155" duration="3650000" />
+      <workItem from="1614444122475" duration="9205000" />
+      <workItem from="1614507008902" duration="13166000" />
     </task>
     <servers />
   </component>

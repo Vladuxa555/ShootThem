@@ -49350,12 +49350,20 @@
       <e p="Source" t="Include">
         <e p="ShootThem" t="Include">
           <e p="Private" t="Include">
+            <e p="AI" t="Include">
+              <e p="STAICharacter.cpp" t="Include" />
+              <e p="STAIController.cpp" t="Include" />
+              <e p="Tasks" t="Include">
+                <e p="STNextLocationTask.cpp" t="Include" />
+              </e>
+            </e>
             <e p="Animations" t="Include">
               <e p="STAnimNotify.cpp" t="Include" />
               <e p="STEquipFinishedAnimNotify.cpp" t="Include" />
               <e p="STReloadFinishedAnimNotify.cpp" t="Include" />
             </e>
             <e p="Components" t="Include">
+              <e p="STAIPerceptionComponent.cpp" t="Include" />
               <e p="STCharacterMovementComponent.cpp" t="Include" />
               <e p="STHealthComponent.cpp" t="Include" />
               <e p="STWeaponComponent.cpp" t="Include" />
@@ -49380,6 +49388,9 @@
               <e p="STPlayerHUDWidget.cpp" t="Include" />
             </e>
             <e p="Weapon" t="Include">
+              <e p="Components" t="Include">
+                <e p="STWeaponFXComponent.cpp" t="Include" />
+              </e>
               <e p="STBaseWeaponActor.cpp" t="Include" />
               <e p="STLauncherWeaponActor.cpp" t="Include" />
               <e p="STProjectile.cpp" t="Include" />
@@ -49387,6 +49398,13 @@
             </e>
           </e>
           <e p="Public" t="Include">
+            <e p="AI" t="Include">
+              <e p="STAICharacter.h" t="Include" />
+              <e p="STAIController.h" t="Include" />
+              <e p="Tasks" t="Include">
+                <e p="STNextLocationTask.h" t="Include" />
+              </e>
+            </e>
             <e p="Animations" t="Include">
               <e p="AnimUtils.h" t="Include" />
               <e p="STAnimNotify.h" t="Include" />
@@ -49394,6 +49412,7 @@
               <e p="STReloadFinishedAnimNotify.h" t="Include" />
             </e>
             <e p="Components" t="Include">
+              <e p="STAIPerceptionComponent.h" t="Include" />
               <e p="STCharacterMovementComponent.h" t="Include" />
               <e p="STHealthComponent.h" t="Include" />
               <e p="STWeaponComponent.h" t="Include" />
@@ -49420,6 +49439,9 @@
               <e p="STPlayerHUDWidget.h" t="Include" />
             </e>
             <e p="Weapon" t="Include">
+              <e p="Components" t="Include">
+                <e p="STWeaponFXComponent.h" t="Include" />
+              </e>
               <e p="STBaseWeaponActor.h" t="Include" />
               <e p="STLauncherWeaponActor.h" t="Include" />
               <e p="STProjectile.h" t="Include" />

@@ -43,7 +43,7 @@ void ASTBaseCharacter::BeginPlay()
 	check(HealthTextComponent);
 	check(GetCharacterMovement());
 
-	OnHealthChanged(HealthComponent->GetHealth());
+	OnHealthChanged(HealthComponent->GetHealth(), 0.0f);
 	HealthComponent->OnDeath.AddUObject(this, &ASTBaseCharacter::OnDeath);
 	HealthComponent->OnHealthChanged.AddUObject(this, &ASTBaseCharacter::OnHealthChanged);
 
@@ -81,6 +81,7 @@ void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	check(PlayerInputComponent);
 	check(WeaponComponent);
 	check(GetCapsuleComponent());
+	check(GetMesh());
 	
 	PlayerInputComponent->BindAxis("MoveForward",this,&ASTBaseCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight",this,&ASTBaseCharacter::MoveRight);
@@ -120,9 +121,8 @@ void ASTBaseCharacter::OnStopRun()
 
 void ASTBaseCharacter::OnDeath()
 {
-	UE_LOG(BaseCharacterLog,Display,TEXT("Player %s is dead"), *GetName());
-
-	PlayAnimMontage(DeathAnimMontage);
+	
+	//PlayAnimMontage(DeathAnimMontage);
 	GetCharacterMovement()->DisableMovement();
 	SetLifeSpan(LifSpanOnDeath);
 	if(Controller)
@@ -131,9 +131,12 @@ void ASTBaseCharacter::OnDeath()
 	}
 	GetCapsuleComponent()->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	WeaponComponent->StopFire();
+
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetMesh()->SetSimulatePhysics(true);
 }
 
-void ASTBaseCharacter::OnHealthChanged(float Health)
+void ASTBaseCharacter::OnHealthChanged(float Health,float HealthDelta)
 {
 	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"),Health)));
 }

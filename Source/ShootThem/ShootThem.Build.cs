@@ -8,7 +8,16 @@ public class ShootThem : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { 
+			"Core", 
+			"CoreUObject",
+			"Engine", 
+			"InputCore",
+			"Niagara",
+			"PhysicsCore",
+			"GameplayTasks",
+			"NavigationSystem",
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 		
@@ -16,10 +25,14 @@ public class ShootThem : ModuleRules
 		"ShootThem/Public/Player",
 		"ShootThem/Public/Components",
 		"ShootThem/Public/Dev",
-		"ShootThem/Public/Weapon",
+		"ShootThem/Public/Weapon", 
 		"ShootThem/Public/UI",
 		"ShootThem/Public/Animations",
-		"ShootThem/Public/Pickups"});
+		"ShootThem/Public/Pickups",
+		"ShootThem/Public/Weapon/Components",
+		"ShootThem/Public/AI",
+		"ShootThem/Public/AI/Tasks"
+		});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

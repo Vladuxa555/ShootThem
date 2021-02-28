@@ -7,7 +7,7 @@
 #include "STCoreTypes.h"
 #include "STHealthComponent.generated.h"
 
-
+class UCameraShakeBase;
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -48,10 +48,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Heal",meta = (EditCondition="AutoHeal"))
 	float HealModifier = 5.0f;
 	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Heal",meta = (EditCondition="VFX"))
+	TSubclassOf<UCameraShakeBase> CameraShake;
 	
 	virtual void BeginPlay() override;
 
-private:
+private: 
 	FTimerHandle HealTimerHandle;
 	float Health = 0.0f;
 	UFUNCTION()
@@ -59,5 +61,7 @@ private:
 		DamageType, class AController* InstigatedBy, AActor* DamageCauser );
 	void HealUpdate();
 	void SetHealth(float NewHealth);
+
+	void PlayCameraShake();
 
 };
