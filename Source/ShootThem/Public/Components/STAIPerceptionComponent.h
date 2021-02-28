@@ -13,5 +13,7 @@ UCLASS()
 class SHOOTTHEM_API USTAIPerceptionComponent : public UAIPerceptionComponent
 {
 	GENERATED_BODY()
+	public:
+	AActor* GetClosestEnemy() const;
 	
 };

@@ -31,7 +31,8 @@ public class ShootThem : ModuleRules
 		"ShootThem/Public/Pickups",
 		"ShootThem/Public/Weapon/Components",
 		"ShootThem/Public/AI",
-		"ShootThem/Public/AI/Tasks"
+		"ShootThem/Public/AI/Tasks",
+		"ShootThem/Public/AI/Services"
 		});
 
 		// Uncomment if you are using Slate UI

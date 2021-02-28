@@ -49351,6 +49351,9 @@
         <e p="ShootThem" t="Include">
           <e p="Private" t="Include">
             <e p="AI" t="Include">
+              <e p="Services" t="Include">
+                <e p="STFindEnemyService.cpp" t="Include" />
+              </e>
               <e p="STAICharacter.cpp" t="Include" />
               <e p="STAIController.cpp" t="Include" />
               <e p="Tasks" t="Include">
@@ -49399,6 +49402,9 @@
           </e>
           <e p="Public" t="Include">
             <e p="AI" t="Include">
+              <e p="Services" t="Include">
+                <e p="STFindEnemyService.h" t="Include" />
+              </e>
               <e p="STAICharacter.h" t="Include" />
               <e p="STAIController.h" t="Include" />
               <e p="Tasks" t="Include">
