@@ -2,9 +2,6 @@
 
 
 #include "UI/STPlayerHUDWidget.h"
-
-#include <activation.h>
-
 #include "Components/STHealthComponent.h"
 #include "Components/STWeaponComponent.h"
 #include"STUtils.h"
@@ -44,14 +41,13 @@ bool USTPlayerHUDWidget::IsPlayerSpectating() const
 	return Controller && Controller->GetStateName() == NAME_Spectating;
 }
 
-bool USTPlayerHUDWidget::Initialize()
+void USTPlayerHUDWidget::NativeOnInitialized()
 {
-	const auto HealthComponent = STUtils::GetSTPlayerComponent<USTHealthComponent>(GetOwningPlayerPawn());
-	if(HealthComponent)
+	if(GetOwningPlayer())
 	{
-		HealthComponent->OnHealthChanged.AddUObject(this,&USTPlayerHUDWidget::OnHealthChanged);
+		GetOwningPlayer()->GetOnNewPawnNotifier().AddUObject(this,&USTPlayerHUDWidget::OnNewPawn);
+		OnNewPawn(GetOwningPlayerPawn());
 	}
-	return Super::Initialize();
 }
 
 void USTPlayerHUDWidget::OnHealthChanged(float Health,float HealthDelta)
@@ -60,5 +56,14 @@ void USTPlayerHUDWidget::OnHealthChanged(float Health,float HealthDelta)
 	{
 		OnTakeDamage();
 	} 
+}
+
+void USTPlayerHUDWidget::OnNewPawn(APawn* NewPawn)
+{
+	const auto HealthComponent = STUtils::GetSTPlayerComponent<USTHealthComponent>(NewPawn);
+	if(HealthComponent && !HealthComponent->OnHealthChanged.IsBoundToObject(this))
+	{
+		HealthComponent->OnHealthChanged.AddUObject(this,&USTPlayerHUDWidget::OnHealthChanged);
+	}
 }
 

@@ -21,7 +21,6 @@ public:
 	ASTBaseWeaponActor();
 
 	FOnClipEmptySignature OnClipEmpty;
-
 	virtual void StartFire();
 	virtual void StopFire();
 	void ChangeClip();
@@ -31,6 +30,7 @@ public:
 	FAmmoData GetAmmoData() const { return CurrentAmmo; }
 
 	bool TryToAddAmmo(int32 ClipsAmount);
+	bool IsAmmoEmpty() const;
 
 protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Weapon")
@@ -53,7 +53,6 @@ protected:
 	virtual void BeginPlay() override;
 
 	virtual void MakeShot();
-	APlayerController* GetPlayerController() const;
 
 	bool GetPlayerViewPoint(FVector& ViewLocation, FRotator& ViewRotation) const;
 	FVector GetMuzzleWorldLocation() const;
@@ -62,7 +61,6 @@ protected:
 	void MakeHit(FHitResult& HitResult, const FVector& TraceStart, const FVector& TraceEnd);
 
 	void DecreaseAmmo();
-	bool IsAmmoEmpty() const;
 	bool IsClipEmpty() const;
 	bool IsAmmoFull() const;
 

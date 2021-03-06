@@ -15,6 +15,7 @@ constexpr static int32 WeaponNum = 2;
 USTWeaponComponent::USTWeaponComponent()
 {
 	PrimaryComponentTick.bCanEverTick = false;
+	
 }
 
 
@@ -98,12 +99,12 @@ void USTWeaponComponent::AttachWeaponToSocket(ASTBaseWeaponActor* Weapon, UScene
 	FAttachmentTransformRules AttachementRules(EAttachmentRule::SnapToTarget, false);
 	Weapon->AttachToComponent(SceneComponent, AttachementRules, SocketName);
 }
-
 void USTWeaponComponent::StartFire()
 {
 	if (!CanFire()) return;
 	CurrentWeapon->StartFire();
 }
+
 
 void USTWeaponComponent::StopFire()
 {

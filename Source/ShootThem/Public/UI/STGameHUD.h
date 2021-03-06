@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "STCoreTypes.h"
 #include "GameFramework/HUD.h"
 #include "STGameHUD.generated.h"
 
@@ -20,8 +21,21 @@ class SHOOTTHEM_API ASTGameHUD : public AHUD
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="UI")
 	TSubclassOf<UUserWidget> PlayerHUDWidgetClass;
 
-	virtual  void BeginPlay() override;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="UI")
+	TSubclassOf<UUserWidget> PauseWidgetClass;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="UI")
+	TSubclassOf<UUserWidget> GameOverWidgetClass;
+
+	virtual void BeginPlay() override;
 
 	private:
+	UPROPERTY()
+	TMap <ESTMatchState, UUserWidget*> GameWidgets;
+
+	UPROPERTY()
+	UUserWidget* CurrentWidget = nullptr;
+	
 	void DrawCrossHair();
+	void OnMatchStateChanged(ESTMatchState State);
 };

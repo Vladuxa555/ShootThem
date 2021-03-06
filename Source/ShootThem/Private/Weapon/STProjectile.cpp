@@ -23,7 +23,11 @@ ASTProjectile::ASTProjectile()
 	MovementComponent->ProjectileGravityScale = 0.1f;
 
 	WeaponFXComponent = CreateDefaultSubobject<USTWeaponFXComponent>("WeaponFXComponent");
-
+	if(HasAuthority())
+	{
+		bReplicates = true;
+		SetReplicateMovement(true);
+	}
 }
 
 void ASTProjectile::BeginPlay()

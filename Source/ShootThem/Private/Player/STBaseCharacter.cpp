@@ -2,10 +2,7 @@
 
 
 #include "Player/STBaseCharacter.h"
-#include "Camera/CameraComponent.h"
-#include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "GameFramework/SpringArmComponent.h"
 #include "Components/STCharacterMovementComponent.h"
 #include "Components/STHealthComponent.h"
 #include "Components/TextRenderComponent.h"
@@ -18,13 +15,6 @@ ASTBaseCharacter::ASTBaseCharacter(const FObjectInitializer& ObjInit):Super(ObjI
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	SpringArmComponent=CreateDefaultSubobject<USpringArmComponent>("SpringArmComponent");
-	SpringArmComponent->SetupAttachment(GetRootComponent());
-	SpringArmComponent->bUsePawnControlRotation=true;
-	SpringArmComponent->SocketOffset = FVector(0.f,100.0f,80.0f);
-	
-	CameraComponent=CreateDefaultSubobject<UCameraComponent>("CameraComponent");
-	CameraComponent->SetupAttachment(SpringArmComponent);
 
 	HealthComponent = CreateDefaultSubobject<USTHealthComponent>("HealthComponent");
 	
@@ -42,20 +32,14 @@ void ASTBaseCharacter::BeginPlay()
 	check(HealthComponent);
 	check(HealthTextComponent);
 	check(GetCharacterMovement());
+	check(GetMesh());
 
 	OnHealthChanged(HealthComponent->GetHealth(), 0.0f);
 	HealthComponent->OnDeath.AddUObject(this, &ASTBaseCharacter::OnDeath);
 	HealthComponent->OnHealthChanged.AddUObject(this, &ASTBaseCharacter::OnHealthChanged);
 
 	LandedDelegate.AddDynamic(this, &ASTBaseCharacter::OnGroundLanded);
-
 }
-
-bool ASTBaseCharacter::IsRunning() const
-{
-	return WantsToRun && IsMoveForward && !GetVelocity().IsZero();
-}
-
 float ASTBaseCharacter::GetMovementDirection() const
 {
 	if(GetVelocity().IsZero())return 0.0f;
@@ -66,69 +50,25 @@ float ASTBaseCharacter::GetMovementDirection() const
 	return CrossProduct.IsZero() ? Degrees : Degrees*FMath::Sign(CrossProduct.Z);
 }
 
+void ASTBaseCharacter::SetPlayerColor(const FLinearColor& Color)
+{
+	const auto MaterialInst = GetMesh()->CreateAndSetMaterialInstanceDynamic(0);
+	if(!MaterialInst) return;
+
+	MaterialInst->SetVectorParameterValue(MaterialColorName,Color);
+}
+
 // Called every frame
 void ASTBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	
 }
-
-// Called to bind functionality to input
-void ASTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	check(PlayerInputComponent);
-	check(WeaponComponent);
-	check(GetCapsuleComponent());
-	check(GetMesh());
-	
-	PlayerInputComponent->BindAxis("MoveForward",this,&ASTBaseCharacter::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight",this,&ASTBaseCharacter::MoveRight);
-	PlayerInputComponent->BindAxis("LookUp",this,&ASTBaseCharacter::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("TurnAround",this,&ASTBaseCharacter::AddControllerYawInput);
-	PlayerInputComponent->BindAction("Jump",IE_Pressed,this,&ASTBaseCharacter::Jump);
-	PlayerInputComponent->BindAction("Run",IE_Pressed,this,&ASTBaseCharacter::OnStartRun);
-	PlayerInputComponent->BindAction("Run",IE_Released,this,&ASTBaseCharacter::OnStopRun);
-	PlayerInputComponent->BindAction("Fire",IE_Pressed,WeaponComponent,&USTWeaponComponent::StartFire);
-	PlayerInputComponent->BindAction("Fire",IE_Released,WeaponComponent,&USTWeaponComponent::StopFire);
-	PlayerInputComponent->BindAction("NextWeapon",IE_Pressed,WeaponComponent,&USTWeaponComponent::NextWeapon);
-	PlayerInputComponent->BindAction("Reload",IE_Pressed,WeaponComponent,&USTWeaponComponent::Reload);
- 
-}
-
-void ASTBaseCharacter::MoveForward(float Amount)
-{
-	IsMoveForward = Amount > 0.0f;
-	if (Amount == 0.0f) return;
-	AddMovementInput(GetActorForwardVector(), Amount);
-}
-
-void ASTBaseCharacter::MoveRight(float Amount)
-{
-	if (Amount == 0.0f) return;
-	AddMovementInput(GetActorRightVector(),Amount);
-}
-
-void ASTBaseCharacter::OnStartRun()
-{
-	WantsToRun=true;
-}
-void ASTBaseCharacter::OnStopRun()
-{
-	WantsToRun=false;
-}
-
 void ASTBaseCharacter::OnDeath()
 {
-	
 	//PlayAnimMontage(DeathAnimMontage);
 	GetCharacterMovement()->DisableMovement();
 	SetLifeSpan(LifSpanOnDeath);
-	if(Controller)
-	{
-		Controller->ChangeState(NAME_Spectating);
-	}
+	
 	GetCapsuleComponent()->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	WeaponComponent->StopFire();
 
@@ -152,16 +92,7 @@ void ASTBaseCharacter::OnGroundLanded(const FHitResult& Hit)
 	UE_LOG(BaseCharacterLog,Display,TEXT("FinalDamage: %f"), FinalDamage);
 	TakeDamage(FinalDamage,FDamageEvent{},nullptr,nullptr);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool ASTBaseCharacter::IsRunning() const
+{
+	return false;
+}

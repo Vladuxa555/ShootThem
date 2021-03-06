@@ -12,9 +12,6 @@
 #include "GameFramework/Controller.h"
 #include "STBaseCharacter.generated.h"
 
-
-class UCameraComponent;
-class USpringArmComponent;
 class USTHealthComponent;
 class UTextRenderComponent;
 class USTWeaponComponent;
@@ -28,16 +25,10 @@ public:
 	ASTBaseCharacter(const FObjectInitializer& ObjInit);
 
 protected:
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Components")
-	USpringArmComponent* SpringArmComponent;
-
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Components")
-	UCameraComponent* CameraComponent;
-
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
 	USTHealthComponent* HealthComponent;
 
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")//delete this
 	UTextRenderComponent* HealthTextComponent;
 
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite,Category="Component")
@@ -55,34 +46,23 @@ protected:
 	UPROPERTY(EditDefaultsOnly,Category="Damage")
 	FVector2D LandedDamage = FVector2D(10.0f, 100.0f);
 
+	UPROPERTY(EditDefaultsOnly,Category="Material")
+	FName MaterialColorName = "Paint Color";
 
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void OnDeath();
 public:
 	UFUNCTION(BlueprintCallable,Category="Movement")
-	bool IsRunning() const;
+	virtual bool IsRunning() const;
+	
 	UFUNCTION(BlueprintCallable,Category="Movement")
 	float GetMovementDirection() const;
 
-public:
-	// Called every frame
+	void SetPlayerColor(const FLinearColor& Color);
+
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void OnHealthChanged(float Health,float HealthDelta);
 private:
-	bool WantsToRun = false;
-	bool IsMoveForward = false;
-
-	void MoveForward(float Amount);
-	void MoveRight(float Amount);
-
-	void OnStartRun();
-	void OnStopRun();
-
-	void OnDeath();
-	void OnHealthChanged(float Health,float HealthDelta);
-
 	UFUNCTION()
 	void OnGroundLanded(const FHitResult& Hit);
 };

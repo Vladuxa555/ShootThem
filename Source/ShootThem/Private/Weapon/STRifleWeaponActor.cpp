@@ -16,7 +16,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogRifleWeapon,All,All);
 ASTRifleWeaponActor::ASTRifleWeaponActor()
 {
 	WeaponFXComponent = CreateDefaultSubobject<USTWeaponFXComponent>("WeaponFXComponent");
-	
+	bReplicates = true;
 }
 
 void ASTRifleWeaponActor::BeginPlay()
@@ -55,10 +55,6 @@ void ASTRifleWeaponActor::MakeShot()
 	SpawnTrace(GetMuzzleWorldLocation(),TraceFXEnd);
 	DecreaseAmmo();
 }
-
-
-
-
 void ASTRifleWeaponActor::StartFire()
 {
 	InitMuzzleFX();
@@ -90,7 +86,7 @@ void ASTRifleWeaponActor::MakeDamage(const FHitResult& HitResult)
 	const auto DamagedActor = HitResult.GetActor();
 	if(!DamagedActor) return;
 
-	DamagedActor->TakeDamage(DamageAmount,FDamageEvent(),GetPlayerController(),this);
+	DamagedActor->TakeDamage(DamageAmount,FDamageEvent(),GetController(),this);
 }
 
 void ASTRifleWeaponActor::InitMuzzleFX()
@@ -111,6 +107,7 @@ void ASTRifleWeaponActor::SetMuzzleEffectVisibility(bool Visible)
 	}
 }
 
+
 void ASTRifleWeaponActor::SpawnTrace(const FVector& TraceStart, const FVector& TraceEnd)
 {
 	const auto TraceFxComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),TraceFX,TraceStart);
@@ -118,4 +115,10 @@ void ASTRifleWeaponActor::SpawnTrace(const FVector& TraceStart, const FVector& T
 	{
 		TraceFxComponent->SetNiagaraVariableVec3(TraceTargetName,TraceEnd);
 	}
+}
+
+AController* ASTRifleWeaponActor::GetController() const
+{
+	const auto Pawn = Cast<APawn>(GetOwner());
+	return Pawn ? Pawn->GetController(): nullptr;
 }

@@ -32,7 +32,9 @@ public class ShootThem : ModuleRules
 		"ShootThem/Public/Weapon/Components",
 		"ShootThem/Public/AI",
 		"ShootThem/Public/AI/Tasks",
-		"ShootThem/Public/AI/Services"
+		"ShootThem/Public/AI/Services",
+		"ShootThem/Public/Menu/",
+		"ShootThem/Public/Menu/UI"
 		});
 
 		// Uncomment if you are using Slate UI

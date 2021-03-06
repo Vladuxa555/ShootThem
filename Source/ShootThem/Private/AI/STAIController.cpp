@@ -5,11 +5,15 @@
 #include "AI/STAICharacter.h"
 #include "Components/STAIPerceptionComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Components/STRespawnComponent.h"
 
 ASTAIController::ASTAIController()
 {
 	STAIPerceptionComponent = CreateDefaultSubobject<USTAIPerceptionComponent>("STPerceptionComponent");
 	SetPerceptionComponent(*STAIPerceptionComponent);
+
+	RespawnComponent = CreateDefaultSubobject<USTRespawnComponent>("RespawnComponent");
+	bWantsPlayerState =true;
 }
 
 void ASTAIController::OnPossess(APawn* InPawn)

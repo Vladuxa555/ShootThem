@@ -17,9 +17,11 @@ class SHOOTTHEM_API ASTLauncherWeaponActor : public ASTBaseWeaponActor
 {
 	GENERATED_BODY()
 public:
+	ASTLauncherWeaponActor();
 	virtual void StartFire() override;
 protected:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Weapon")
 	TSubclassOf<ASTProjectile> ProjectileClass;
 	virtual void MakeShot() override;
+	
 };

@@ -6,6 +6,7 @@
 #include "AIController.h"
 #include "STAIController.generated.h"
 
+class USTRespawnComponent;
 class USTAIPerceptionComponent;
 /**
  * 
@@ -19,6 +20,10 @@ class SHOOTTHEM_API ASTAIController : public AAIController
 	protected:
 	UPROPERTY(VisibleAnywhere ,BlueprintReadWrite,Category="Components")
 	USTAIPerceptionComponent* STAIPerceptionComponent;
+	
+	UPROPERTY(VisibleAnywhere ,BlueprintReadWrite,Category="Components")
+	USTRespawnComponent* RespawnComponent;
+
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="AI")
 	FName FocusOnKeyName = "EnemyActor";

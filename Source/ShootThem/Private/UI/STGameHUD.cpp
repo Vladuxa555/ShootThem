@@ -4,6 +4,10 @@
 #include "UI/STGameHUD.h"
 #include "Engine/Canvas.h"
 #include "Blueprint/UserWidget.h"
+#include "STGameModeBase.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogSTGameHUD ,All, All);
+
 void ASTGameHUD::DrawHUD()
 {
 	Super::DrawHUD();
@@ -14,10 +18,26 @@ void ASTGameHUD::DrawHUD()
 void ASTGameHUD::BeginPlay()
 {
 	Super::BeginPlay();
-	auto PlayerHUDWidget = CreateWidget<UUserWidget>(GetWorld(),PlayerHUDWidgetClass);
-	if(PlayerHUDWidget)
+
+	GameWidgets.Add(ESTMatchState::InProgress,CreateWidget<UUserWidget>(GetWorld(),PlayerHUDWidgetClass));
+	GameWidgets.Add(ESTMatchState::Pause,CreateWidget<UUserWidget>(GetWorld(),PauseWidgetClass));
+	GameWidgets.Add(ESTMatchState::GameOver,CreateWidget<UUserWidget>(GetWorld(),GameOverWidgetClass));
+
+	for(auto GameWidgetPair: GameWidgets)
 	{
-		PlayerHUDWidget->AddToViewport();
+		const auto GameWidget = GameWidgetPair.Value;
+		if(!GameWidget) continue;
+
+		GameWidget->AddToViewport();
+		GameWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+	if(GetWorld())
+	{
+		const auto GameMode = Cast<ASTGameModeBase>(GetWorld()->GetAuthGameMode());
+		if(GameMode)
+		{
+			GameMode->OnMatchStateChangedSignature.AddUObject(this,&ASTGameHUD::OnMatchStateChanged);
+		}
 	}
 }
 
@@ -33,4 +53,21 @@ void ASTGameHUD::DrawCrossHair()
 		Center.Min + HalfLineSize, Center.Max,LinearColor,LineThickness);
 	DrawLine(Center.Min, Center.Max-HalfLineSize,
         Center.Min, Center.Max + HalfLineSize,LinearColor,LineThickness);
+}
+
+void ASTGameHUD::OnMatchStateChanged(ESTMatchState State)
+{
+	if(CurrentWidget)
+	{
+		CurrentWidget->SetVisibility(ESlateVisibility::Hidden);
+	}
+	if(GameWidgets.Contains(State))
+	{
+		CurrentWidget = GameWidgets[State];
+	}
+	if(CurrentWidget)
+	{
+		CurrentWidget->SetVisibility(ESlateVisibility::Visible);
+	}
+	UE_LOG(LogSTGameHUD,Display,TEXT("Match state changed: %s"), *UEnum::GetValueAsString(State));
 }

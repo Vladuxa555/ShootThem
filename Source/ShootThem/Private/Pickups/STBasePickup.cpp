@@ -16,7 +16,7 @@ ASTBasePickup::ASTBasePickup()
 	CollisionComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	CollisionComponent->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Overlap);
 	SetRootComponent(CollisionComponent);
-
+	bReplicates =true;
 }
 
 // Called when the game starts or when spawned

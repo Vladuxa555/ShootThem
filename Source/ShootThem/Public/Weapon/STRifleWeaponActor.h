@@ -19,6 +19,7 @@ class SHOOTTHEM_API ASTRifleWeaponActor : public ASTBaseWeaponActor
 	GENERATED_BODY()
 	public:
 	ASTRifleWeaponActor();
+	
 	virtual void StartFire()override;
 	virtual void StopFire()override;
 	
@@ -53,5 +54,6 @@ class SHOOTTHEM_API ASTRifleWeaponActor : public ASTBaseWeaponActor
 	void MakeDamage(const FHitResult& HitResult);
 	void InitMuzzleFX();
 	void SetMuzzleEffectVisibility(bool Visible);
+	AController* GetController() const;
 	void SpawnTrace(const FVector& TraceStart,const FVector& TraceEnd);
 };

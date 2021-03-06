@@ -3,6 +3,11 @@
 
 #include "Weapon/STLauncherWeaponActor.h"
 #include "STProjectile.h"
+
+ASTLauncherWeaponActor::ASTLauncherWeaponActor()
+{
+}
+
 void ASTLauncherWeaponActor::StartFire()
 {
 	MakeShot();
